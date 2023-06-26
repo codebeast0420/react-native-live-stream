@@ -1,4 +1,4 @@
-package com.camera;
+package com.cameraapp;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

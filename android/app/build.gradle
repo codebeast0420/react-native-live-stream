@@ -73,13 +73,15 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.camera"
+    namespace "com.cameraapp"
     defaultConfig {
-        applicationId "com.camera"
+        applicationId "com.cameraapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line
+        multiDexEnabled true
     }
     signingConfigs {
         debug {
