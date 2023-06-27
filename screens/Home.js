@@ -36,21 +36,23 @@ const Home = ({ navigation }) => {
 	};
 
 	return (
-		<SafeAreaView style={backgroundStyle}>
+		<SafeAreaView style={backgroundStyle} className='h-full'>
 			<StatusBar
 				barStyle={isDarkMode ? 'light-content' : 'dark-content'}
 				backgroundColor={backgroundStyle.backgroundColor}
 			/>
 			<ScrollView
 				contentInsetAdjustmentBehavior="automatic"
+				className='h-full'
 				style={backgroundStyle}>
-				<Header />
 				<View
+					className='flex flex-col items-center justify-center'
 					style={{
 						backgroundColor: isDarkMode ? Colors.black : Colors.white,
 					}}>
+						<View className='w-full h-[80vh]'></View>
 					<TouchableOpacity onPress={() => navigation.navigate('Camera')}>
-						<Text>Open Camera</Text>
+						<Text className='p-[15px] bg-[#4da6ff] w-3/4 text-center mb-[10vh]'>Open Camera</Text>
 					</TouchableOpacity>
 				</View>
 			</ScrollView>
